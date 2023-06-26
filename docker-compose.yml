@@ -1,0 +1,8 @@
+version: '1'
+
+services:
+  web:
+    build: .
+    container_name: nginx_test_web
+    ports:
+      - 8680:80
