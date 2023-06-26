@@ -9,7 +9,7 @@ build-job:       # This job runs in the build stage, which runs first.
     - bash ./build.sh
     - echo "Compile complete."
   tags:
-    - docker
+    - shared
 
 deploy-job:
   stage: deploy
@@ -18,4 +18,4 @@ deploy-job:
     - bash ./deploy.sh
     - echo "Application Successfully deployed."
   tags:
-    - docker
+    - shared
