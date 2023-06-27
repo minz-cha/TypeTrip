@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rm -rf ~/build
+rm -rf ~/typetrip/react/build
 npm i --force
 npm run build
-mkdir ~/build
-cp -r ./build ~/
+mkdir -p ~/typetrip/react/build
+cp -r ./build ~/typetrip/react
