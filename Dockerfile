@@ -1,14 +1,14 @@
 FROM nginx
 
 # react 폴더 생성
-RUN mkdir /react
-
-# typetrip 폴더 생성
-WORKDIR /react
 RUN mkdir /typetrip
 
+# typetrip 폴더 생성
+WORKDIR /typetrip
+RUN mkdir /react
+
 # work dir 고정
-WORKDIR /react/typetrip
+WORKDIR /typetrip/react
 
 # work dir에 build 폴더 생성
 RUN mkdir ./build
