@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir ./build
-cp -r ~/build ./
+cp -r ~/typetrip/react/build ./
 
 docker compose build --no-cache
 docker compose down
