@@ -34,3 +34,4 @@ deploy-debug-job:
     - echo "Deploying Test Application..."
     - bash ./deploy-debug.sh
     - echo "Application Successfully deployed."
+
