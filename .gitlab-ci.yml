@@ -22,11 +22,11 @@ deploy-release-job:
   tags:
     - shared
 
-deploy-test-job:
+deploy-debug-job:
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
   stage: deploy
   script:
     - echo "Deploying Test Application..."
-    - bash ./deploy-test.sh
+    - bash ./deploy-debug.sh
     - echo "Application Successfully deployed."

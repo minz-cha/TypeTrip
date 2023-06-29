@@ -3,6 +3,6 @@
 mkdir ./build
 cp -r ~/typescript/build ./
 
-docker compose build --no-cache
-docker compose down
-docker compose up -d
+docker compose -f docker-compose-debug.yml build --no-cache
+docker compose -f docker-compose-debug.yml down
+docker compose -f docker-compose-debug.yml up -d
