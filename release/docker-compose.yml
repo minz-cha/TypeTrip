@@ -3,7 +3,6 @@ version: '1'
 services:
   web:
     build:
-      context: typetrip-release
       dockerfile: ../Dockerfile
     container_name: typetrip_release_web
     ports:
