@@ -4,6 +4,7 @@ services:
   web:
     build:
       dockerfile: ../Dockerfile
+      working_directory: '../'
     container_name: typetrip_release_web
     ports:
       - 8880:80
