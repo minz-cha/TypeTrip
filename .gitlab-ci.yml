@@ -11,7 +11,7 @@ build-job:       # This job runs in the build stage, which runs first.
   cache:
     key: "$CI_COMMIT_BRANCH"
     paths:
-      - node_module/
+      - node_modules/
   tags:
     - shared
 
