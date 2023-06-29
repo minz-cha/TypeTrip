@@ -4,7 +4,7 @@ services:
   web:
     build:
       context: typetrip-release
-      dockerfile: Dockerfile.release
+      dockerfile: ../Dockerfile
     container_name: typetrip_release_web
     ports:
       - 8880:80
