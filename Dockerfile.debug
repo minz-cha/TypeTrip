@@ -11,10 +11,10 @@ RUN mkdir /react
 WORKDIR /typetrip/react
 
 # work dir에 build 폴더 생성
-RUN mkdir ./build
+RUN mkdir ./debug
 
 # host의 build 폴더를 workdir의 build 폴더로 복사
-ADD ./build ./build
+ADD ./debug ./build
 
 # Docker nginx의 default.conf를 삭제
 RUN rm /etc/nginx/conf.d/default.conf
