@@ -11,11 +11,22 @@ build-job:       # This job runs in the build stage, which runs first.
   tags:
     - shared
 
-deploy-job:
+deploy-release-job:
+  rules:
+    - if: $CI_COMMIT_BRANCH == "release"
   stage: deploy
   script:
-    - echo "Deploying applicartion..."
-    - bash ./deploy.sh
+    - echo "Deploying application..."
+    - bash ./deploy-release.sh
     - echo "Application Successfully deployed."
   tags:
     - shared
+
+deploy-test-job:
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  stage: deploy
+  script:
+    - echo "Deploying Test Application..."
+    - bash ./deploy-test.sh
+    - echo "Application Successfully deployed."

@@ -1,0 +1,10 @@
+version: '1'
+
+services:
+  web:
+    build:
+      context: typetrip-debug
+      dockerfile: Dockerfile.debug
+    container_name: typetrip_debug_web
+    ports:
+      - 8680:80

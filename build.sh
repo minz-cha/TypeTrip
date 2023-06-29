@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rm -rf ~/build
+rm -rf ~/typescript/build
 npm i --force
 npm run build
-mkdir ~/build
-cp -r ./build ~/
+mkdir -p ~/typescript/build
+cp -r ./build ~/typescript

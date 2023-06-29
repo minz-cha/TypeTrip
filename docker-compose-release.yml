@@ -1,0 +1,10 @@
+version: '1'
+
+services:
+  web:
+    build:
+      context: typetrip-release
+      dockerfile: Dockerfile.release
+    container_name: typetrip_release_web
+    ports:
+      - 8780:80
