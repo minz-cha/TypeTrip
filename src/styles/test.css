@@ -1,0 +1,107 @@
+/* .imageContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-width: 90%;
+  height: 80%;
+  border-radius: 15px;
+  object-fit: contain;
+} */
+@font-face {
+  font-family: "MBC";
+  font-weight: 50;
+  src: url("../fonts/MBC-1961.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Suite";
+  font-weight: 50;
+  src: url("../fonts/SUITE-Bold.ttf") format("truetype");
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 화면 높이에 맞게 설정 */
+  overflow: hidden; /* 스크롤을 숨기기 위해 overflow: hidden;을 추가 */
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /* border-radius: 15px; */
+}
+
+.test-logo {
+  position: absolute;
+  width: auto; /* 원하는 너비로 조정 */
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.test-logo-img {
+  width: 200px; /* 로고의 너비를 원하는 크기로 조정 */
+  height: auto; /* 높이는 자동 조정되도록 설정 */
+}
+
+.question-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-family: "Suite";
+  font-size: 30px;
+  color: white;
+}
+
+.button1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-family: "Suite";
+  font-size: 20px;
+  width: 500px;
+  height: 80px;
+}
+
+.button2 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-family: "Suite";
+  font-size: 20px;
+  width: 500px;
+  height: 80px;
+}
+
+.progress-bar-container {
+  position: absolute;
+  top: calc(20% + 370px); /* question-text의 아래로 위치 조정 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px; /* 수정된 부분 */
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #03009d;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
