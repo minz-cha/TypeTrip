@@ -23,22 +23,39 @@ const QuestionApp = () => {
     } else {
       setCurrentSlide(TOTAL_SLIDES + 1);
     }
-    console.log("mbti값", mbti);
   };
 
   const mbtichecker = () => {
     var map = {};
+    const mbtiCounts = {};
     var result = {};
-    for (var i = 0; i < mbti.length; i++) {
-      if (mbti[i] in map) {
-        map[mbti[i]] += 1;
-      } else {
-        map[mbti[i]] = 1;
-      }
-    }
+    // for (var i = 0; i < mbti.length; i++) {
+    //   if (mbti[i] in map) {
+    //     map[mbti[i]] += 1;
+    //   } else {
+    //     map[mbti[i]] = 1;
+    //   }
+    // }
 
     if (currentSlide > TOTAL_SLIDES) {
       const examResult = mbti.join("");
+
+      // const countLetters = (str, letter) => str.split(letter).length - 1;
+
+      // const findMostFrequentLetter = (str, letters) => {
+      //   const counts = letters.map((letter) => countLetters(str, letter));
+      //   const maxCount = Math.max(...counts);
+      //   const mostFrequentLetters = letters.filter(
+      //     (_, i) => counts[i] === maxCount
+      //   );
+      //   return mostFrequentLetters;
+      // };
+
+      // const EILetters = findMostFrequentLetter(mbti, ["E", "I"]);
+      // const SNLetters = findMostFrequentLetter(mbti, ["S", "N"]);
+      // const TFLetters = findMostFrequentLetter(mbti, ["T", "F"]);
+      // const PJLetters = findMostFrequentLetter(mbti, ["P", "J"]);
+
       navigate(`/result/${examResult}`);
       console.log("mbti값", mbti);
     }
