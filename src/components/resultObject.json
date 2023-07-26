@@ -1,0 +1,290 @@
+{
+  "ISTJ": {
+    "id": "ISTJ",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "ISFJ": {
+    "id": "ISFJ",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "INFJ": {
+    "id": "ISFJ",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "INTJ": {
+    "id": "INTJ",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "ISTP": {
+    "id": "ISTP",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "ISFP": {
+    "id": "ISFP",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "INFP": {
+    "id": "INFP",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "INTP": {
+    "id": "INTP",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "ESTP": {
+    "id": "ESTP",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "ESFP": {
+    "id": "ESFP",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "ENFP": {
+    "id": "ENFP",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "ENTP": {
+    "id": "ENTP",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "ESTJ": {
+    "id": "ESTJ",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "ESFJ": {
+    "id": "ESFJ",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "ENFJ": {
+    "id": "ENFJ",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  },
+  "ENTJ": {
+    "id": "ENTJ",
+    "nick": "a형",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "b행"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "c행"
+      }
+    ]
+  }
+}
