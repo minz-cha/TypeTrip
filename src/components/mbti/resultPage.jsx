@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import resultImg from "../../assets/background-result.png";
 import testLogo from "../../assets/test-logo.svg";
 import resultObject from "../common/resultObject.json";
@@ -8,22 +8,24 @@ import { useParams } from "react-router-dom";
 import enfpImage from "../../assets/enfp.png";
 
 const ResultPage = ({ match }) => {
-  // match.params.result에서 URL에서 전달된 결과값을 가져옴
+  // 결과에 대한 정보 반환
   const params = useParams();
   const mbtiResult = params.result;
-  // const mbtiResult = match.params.result;
-
-  // `mbtiResult` 값을 사용하여 `resultObject`에서 해당하는 데이터를 가져옵니다
   const resultData = resultObject[mbtiResult];
-
-  // resultData에서 필요한 정보들을 추출합니다
   const { id, nick, img, description, like, hate } = resultData;
+
+  // id와 nick 값을 로컬 스토리지에 저장
+  useEffect(() => {
+    localStorage.setItem("id", id);
+    localStorage.setItem("nick", nick);
+  }, [id, nick]);
 
   return (
     <div>
       <div className="resultImageContainer">
         <img src={resultImg} className="image" />
       </div>
+
       <div className="result-container">
         <p style={{ fontSize: "30px" }}>
           [{id}] {nick}
