@@ -9,7 +9,7 @@ const QuestionApp = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(1);
   const navigate = useNavigate();
-  const TOTAL_SLIDES = 10;
+  const TOTAL_SLIDES = 12;
   const slideRef = createRef(null);
   const [mbti, setMbti] = useState([]);
 
@@ -29,17 +29,8 @@ const QuestionApp = () => {
     var map = {};
     const mbtiCounts = {};
     var result = {};
-    // for (var i = 0; i < mbti.length; i++) {
-    //   if (mbti[i] in map) {
-    //     map[mbti[i]] += 1;
-    //   } else {
-    //     map[mbti[i]] = 1;
-    //   }
-    // }
 
     if (currentSlide > TOTAL_SLIDES) {
-      const examResult = mbti.join("");
-
       const countLetters = (arr, letter) =>
         arr.filter((item) => item === letter).length;
 
@@ -58,7 +49,11 @@ const QuestionApp = () => {
       const TFLetters = findMostFrequentLetter(mbti, ["T", "F"]);
       const PJLetters = findMostFrequentLetter(mbti, ["P", "J"]);
 
-      navigate(`/result/${examResult}`);
+      const mbtiResult = EILetters.concat(SNLetters, TFLetters, PJLetters).join(
+        ""
+      );
+
+      navigate(`/result/${mbtiResult}`);
       console.log("mbti값", mbti);
     }
 

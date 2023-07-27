@@ -2,6 +2,21 @@
   {
     "id": 1,
     "option": "EI",
+    "question": "여행을 간다면 몇 명이서 가는게 좋을까?",
+    "answer": [
+      {
+        "type": "E",
+        "content": "사람은 많을수록 좋지!"
+      },
+      {
+        "type": "I",
+        "content": "친한 친구 2명정도가 적당하지"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "option": "EI",
     "question": "나는 여행지를 선택할 때 주로",
     "answer": [
       {
@@ -15,7 +30,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "option": "JP",
     "question": "여행 떠날 때 계획은",
     "answer": [
@@ -26,21 +41,6 @@
       {
         "type": "J",
         "content": "계획은 필수"
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "option": "JP",
-    "question": "여행 경비는",
-    "answer": [
-      {
-        "type": "P",
-        "content": "당장 국제거지만 안되면 되지!"
-      },
-      {
-        "type": "J",
-        "content": "걸어다니는 계산기로 변신"
       }
     ]
   },
@@ -62,30 +62,30 @@
   {
     "id": 5,
     "option": "JP",
-    "question": "여행지에서 식사할 때",
+    "question": "밥을 먹으러 간 가게에 줄이 너무 길 때",
     "answer": [
       {
         "type": "J",
-        "content": "유명한 맛집을 작정하고 노리는 맛집헌터"
+        "content": "두 번째로 정해둔 맛집으로 이동"
       },
       {
         "type": "P",
-        "content": "길걷다가 발견한 길거리 가게"
+        "content": "아까 지나오면서 봤던 마음에 든 가게로 이동"
       }
     ]
   },
   {
     "id": 6,
-    "option": "JP",
-    "question": "여행지에서 길을 잃었을 때",
+    "option": "TF",
+    "question": "여행 동안 운전을 맡은 당신이 가장 듣고 싶은 말은?",
     "answer": [
       {
-        "type": "J",
-        "content": "왔던 길로 돌아가는 헨젤과 그레텔"
+        "type": "F",
+        "content": "진짜 너가 최고다! 너무 고마워.. \n 이 시대의 베스트 드라이버네!"
       },
       {
-        "type": "P",
-        "content": "자꾸 걸어나가면 어딘가 길이 있겠지"
+        "type": "T",
+        "content": "기름값은 우리가 부담할게!"
       }
     ]
   },
@@ -106,46 +106,76 @@
   },
   {
     "id": 8,
-    "option": "JP",
-    "question": "아침을 늦잠 잔 친구에게",
+    "option": "TF",
+    "question": "여행 중 친구들과 사소한 일로 말다툼이 생겼을 때",
     "answer": [
       {
-        "type": "P",
-        "content": "여행은 역시 피곤하긴하지"
+        "type": "T",
+        "content": "이 부분에 대해선 고쳐줬으면 좋겠어"
       },
       {
-        "type": "J",
-        "content": "내일은 시간 지키자"
+        "type": "F",
+        "content": "그렇게 말하면 나 너무 서운해.."
       }
     ]
   },
   {
     "id": 9,
-    "option": "TF",
-    "question": "친구가 쓸데없는 기념품을 살 때",
+    "option": "JP",
+    "question": "여행 둘째날, 늦잠 자버린 당신의 반응은?",
     "answer": [
       {
-        "type": "F",
-        "content": "그래 너가 행복하다면.."
+        "type": "P",
+        "content": "늦잠 잔 김에 오늘 하루는 쉬엄쉬엄 여행한다"
       },
       {
-        "type": "T",
-        "content": "그거 결국 쓰레기 된다?"
+        "type": "J",
+        "content": "빨리 일어나서 여행 일정을 변경한다"
       }
     ]
   },
   {
     "id": 10,
-    "option": "JP",
-    "question": "여행을 다녀온 후",
+    "option": "NS",
+    "question": "게임에 져서 식사 당번이 된 당신, 어떤 음식을 만들까?",
     "answer": [
       {
-        "type": "P",
-        "content": "스윗홈.. 침대로 점프!"
+        "type": "N",
+        "content": "만들어본적 없지만 친구들에게 먹여주고 싶은 음식"
       },
       {
-        "type": "J",
-        "content": "캐리어를 열고 짐을 정리한다"
+        "type": "S",
+        "content": "내가 자주 만들어서 맛있게 만들 수 있는 음식"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "option": "NS",
+    "question": "하늘에 떠 있는 수많은 별을 바라보며 드는 생각은?",
+    "answer": [
+      {
+        "type": "S",
+        "content": "역시 도시랑 다르게 별이 많이 보이네"
+      },
+      {
+        "type": "N",
+        "content": "우와, 방금 별똥별인가? 소원빌자!"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "option": "TF",
+    "question": "친구가 쓸데없는 기념품을 살 때",
+    "answer": [
+      {
+        "type": "F",
+        "content": "오! 예쁜데.. 너가 마음에 들면 뭐.."
+      },
+      {
+        "type": "T",
+        "content": "그게 어디에 필요한데?"
       }
     ]
   }
