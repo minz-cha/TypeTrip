@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import testImg from "../assets/background-test.png";
-import testLogo from "../assets/test-logo.svg";
+import testImg from "../../assets/background-test.png";
+import testLogo from "../../assets/test-logo.svg";
 // import questionImg from "../assets/rectangle-question.png";
-import QuestionApp from "../components/questionApp";
-// import questions from "../components/questionApp.json";
-import "../styles/test.css";
+import QuestionApp from "../mbti/questionApp";
+import "../../styles/test.css";
 
 function Test(props) {
   return (

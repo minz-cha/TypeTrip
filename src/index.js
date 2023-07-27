@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Test from './components/test.jsx'
-import QuestionApp from './components/questionApp';
+import Test from './components/mbti/test.jsx'
+import QuestionApp from './components/mbti/questionApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

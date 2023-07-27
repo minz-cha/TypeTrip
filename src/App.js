@@ -6,8 +6,8 @@ import './App.css';
 import Main from './Main';
 import Auth from "./Auth"
 import Profile from './Profile';
-import Test from "./components/test";
-import ResultPage from './components/resultPage';
+import Test from "./components/mbti/test";
+import ResultPage from './components/mbti/resultPage';
 import { BrowserRouter as Router, Route, Routes, Switch } from "react-router-dom";
 
 function App() {

@@ -1,4 +1,4 @@
-import results from "../components/resultObject.json";
+import results from "../components/common/resultObject.json";
 
 const Result = () => {
   const type = results[tripType];
