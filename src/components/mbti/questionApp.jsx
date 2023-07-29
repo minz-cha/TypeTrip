@@ -1,6 +1,5 @@
-import React, { createRef, useEffect, useState } from "react";
-// import testImg from "../assets/background-test.png";
-// import testLogo from "../assets/test-logo.svg";
+import React, { Fragment, createRef, useEffect, useState } from "react";
+import questionBox from "../../assets/question-box.png";
 import { useNavigate } from "react-router-dom";
 import "../../styles/test.css";
 import questions from "../common/questionObject.json";
@@ -72,8 +71,11 @@ const QuestionApp = () => {
 
   return (
     <div className="question-container">
-      <div>
-        <div className="question-text">{currentQuestion.question}</div>
+      <div className="question-box">
+        <img src={questionBox} />
+        <p>{currentQuestion.question}</p>
+      </div>
+      <div className="question-btn">
         <button onClick={() => handleButtonClick(0)} className="button1">
           {buttonLabels[0]}
         </button>
@@ -81,11 +83,13 @@ const QuestionApp = () => {
           {buttonLabels[1]}
         </button>
       </div>
-      <div className="progress-bar-container">
-        <div
-          className="progress-bar"
-          style={{ width: `${(currentSlide / TOTAL_SLIDES) * 100}%` }}
-        ></div>
+      <div className="bottom-container">
+        <div className="progress-bar-container">
+          <div
+            className="progress-bar"
+            style={{ width: `${(currentSlide / TOTAL_SLIDES) * 100}%` }}
+          ></div>
+        </div>
       </div>
     </div>
   );
