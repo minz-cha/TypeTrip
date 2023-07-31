@@ -19,38 +19,32 @@ const ResultPage = ({ match }) => {
   }, [id, nick]);
 
   return (
-    <div className="image-container">
-      <div className="testImg">
-        <img src={testImg} />
-        <div className="test-logo">
-          <img src={testLogo} className="test-logo-img" />
+    <div className="main-container">
+      <div className="result-container">
+        <div className="result-name">
+          <p className="p1" style={{ fontSize: "30px" }}>
+            [{id}] {nick}
+          </p>
+          <span style={{ fontSize: "16px" }}>{description}</span>
         </div>
-        <div className="result-container">
-          <div className="result-name">
-            <p style={{ fontSize: "30px" }}>
-              [{id}] {nick}
-            </p>
-            <span style={{ fontSize: "16px" }}>{description}</span>
+        <div className="like-hate-container">
+          <div className="like-container">
+            <h2>LIKE</h2>
+            {like.map((item) => (
+              <div key={item.img}>
+                <img src={item.img} alt={item.sub} />
+                <p>{item.sub}</p>
+              </div>
+            ))}
           </div>
-          <div className="like-hate-container">
-            <div className="like-container">
-              <h2>LIKE</h2>
-              {like.map((item) => (
-                <div key={item.img}>
-                  <img src={item.img} alt={item.sub} />
-                  <p>{item.sub}</p>
-                </div>
-              ))}
-            </div>
-            <div className="hate-container">
-              <h2>HATE</h2>
-              {hate.map((item) => (
-                <div key={item.img}>
-                  <img src={item.img} alt={item.sub} />
-                  <p>{item.sub}</p>
-                </div>
-              ))}
-            </div>
+          <div className="hate-container">
+            <h2>HATE</h2>
+            {hate.map((item) => (
+              <div key={item.img}>
+                <img src={item.img} alt={item.sub} />
+                <p>{item.sub}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

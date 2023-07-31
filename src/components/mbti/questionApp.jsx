@@ -70,12 +70,12 @@ const QuestionApp = () => {
   const buttonLabels = currentQuestion.answer.map((ans) => ans.content);
 
   return (
-    <div className="question-container">
-      <div className="question-box">
+    <div className="main-container">
+      <div className="top-box">
         <img src={questionBox} />
         <p>{currentQuestion.question}</p>
       </div>
-      <div className="question-btn">
+      <div className="middle-box">
         <button onClick={() => handleButtonClick(0)} className="button1">
           {buttonLabels[0]}
         </button>
@@ -83,7 +83,7 @@ const QuestionApp = () => {
           {buttonLabels[1]}
         </button>
       </div>
-      <div className="bottom-container">
+      <div className="bottom-box">
         <div className="progress-bar-container">
           <div
             className="progress-bar"

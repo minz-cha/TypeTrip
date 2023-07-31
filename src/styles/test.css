@@ -44,7 +44,7 @@ body {
   z-index: 1;
 }
 
-.question-container {
+.main-container {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -54,21 +54,21 @@ body {
   z-index: 1;
 }
 
-.question-box {
+.top-box {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.question-box img {
+.top-box img {
   position: relative;
   display: block;
   width: 100%;
   margin: 0 auto;
 }
 
-.question-box p {
+.top-box p {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -82,7 +82,7 @@ body {
   box-sizing: border-box;
 }
 
-.question-btn {
+.middle-box {
   position: relative;
   display: flex;
   align-items: center;
@@ -90,7 +90,7 @@ body {
   height: 70%;
 }
 
-.question-btn button {
+.middle-box button {
   position: absolute;
   border-radius: 13px;
   left: 50%;
@@ -103,15 +103,15 @@ body {
   border: 1px solid black;
 }
 
-.question-btn button.button1 {
+.middle-box button.button1 {
   top: 30%;
 }
 
-.question-btn button.button2 {
+.middle-box button.button2 {
   top: 60%;
 }
 
-.bottom-container {
+.bottom-box {
   position: relative;
   display: flex;
   align-items: center;
@@ -137,6 +137,26 @@ body {
   transition: width 0.5s ease-in-out;
 }
 
+.start-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 70%;
+}
+
+.start-p1 {
+  position: relative;
+  font-family: "Suite";
+  top: 15%;
+}
+
+.start-p2 {
+  position: relative;
+  font-family: "Suite";
+  top: 20%;
+}
+
 .resultImageContainer {
   font-family: "Suite";
   position: relative;
@@ -149,8 +169,8 @@ body {
 
 .result-container {
   position: absolute;
-  width: 50%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -165,12 +185,13 @@ body {
   height: 70%;
 }
 
-.result-name p {
+.result-name p1 {
   position: absolute;
   font-family: "Suite";
+  top: 20%;
 }
 
-.result-name span {
+.result-name p2 {
   position: absolute;
   top: 40%;
   font-family: "Suite";
