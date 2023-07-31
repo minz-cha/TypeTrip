@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import testImg from "../../assets/background-result.png";
-import testLogo from "../../assets/test-logo.svg";
-import QuestionApp from "../mbti/questionApp";
-import "../../styles/test.css";
+import testImg from "../assets/background-result.png";
+import testLogo from "../assets/test-logo.svg";
+import StartApp from "../components/mbti/startApp";
+import "../styles/test.css";
 
-function Test(props) {
+const StartPage = () => {
   return (
     <div className="image-container">
       <div className="testImg">
@@ -13,11 +13,11 @@ function Test(props) {
           <img src={testLogo} className="test-logo-img" />
         </div>
         <section>
-          <QuestionApp />
+          <StartApp />
         </section>
       </div>
     </div>
   );
-}
+};
 
-export default Test;
+export default StartPage;

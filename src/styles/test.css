@@ -111,6 +111,22 @@ body {
   top: 60%;
 }
 
+.bottom-box button {
+  position: absolute;
+  border-radius: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-family: "Suite";
+  font-size: 20px;
+  width: 30%;
+  height: 100%;
+  top: 50%;
+  color: white;
+  background-color: #03009d;
+  border: 0.5px solid white;
+}
+
 .bottom-box {
   position: relative;
   display: flex;
@@ -171,7 +187,7 @@ body {
   position: absolute;
   width: 60%;
   height: 60%;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -183,25 +199,39 @@ body {
   align-items: center;
   flex-direction: column;
   height: 70%;
+  width: auto;
 }
 
-.result-name p1 {
+.p1 {
   position: absolute;
   font-family: "Suite";
-  top: 20%;
+  top: 0%;
 }
 
-.result-name p2 {
+.p2 {
   position: absolute;
-  top: 40%;
+  top: 60%;
   font-family: "Suite";
+}
+
+/* .result-name img {
+  top: 50%;
+  width: 40%;
+  height: 10%;
+} */
+
+.sample {
+  position: absolute;
+  top: 30%;
+  width: 40%;
+  height: 10%;
 }
 
 .like-hate-container {
   position: relative;
   display: flex;
   align-items: center;
-  height: 30%;
+  height: 50%;
 }
 
 .like-container,

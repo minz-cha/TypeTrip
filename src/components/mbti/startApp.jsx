@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import testImg from "../../assets/background-result.png";
-import testLogo from "../../assets/test-logo.svg";
-import QuestionApp from "./questionApp";
 import "../../styles/test.css";
 
 function StartApp(props) {
@@ -25,8 +22,8 @@ function StartApp(props) {
           </p>
         </div>
       </div>
-      <div className="start-btn">
-        <button onClick={navigateToTest}>test</button>
+      <div className="bottom-box">
+        <button onClick={navigateToTest}>시작하기</button>
       </div>
     </div>
   );
