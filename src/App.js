@@ -29,6 +29,7 @@ function App() {
         <Route path="/test" element={<StartPage />} />
         <Route path="/question" element={<QuestionPage />} />
         <Route path="/result/:result" element={<ResultPage />} />
+        <Route path="/main" element={<StartPage />} />
       </Routes>
     </Router>
   )

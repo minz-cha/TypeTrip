@@ -1,11 +1,16 @@
 import React, { useEffect } from "react";
-import testImg from "../../assets/background-result2.png";
 import sampleImg from "../../assets/test-image.png";
 import resultObject from "../common/resultObject.json";
 import "../../styles/test.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const ResultApp = ({ match }) => {
+  const navigate = useNavigate();
+
+  const navigateToMain = () => {
+    navigate("/main");
+  };
+
   const params = useParams();
   const mbtiResult = params.result;
   const resultData = resultObject[mbtiResult];
@@ -47,6 +52,11 @@ const ResultApp = ({ match }) => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="bottom-box">
+          <button onClick={navigateToMain} className="main-btn">
+            마음맞는 동행자 찾으러가기➡️
+          </button>
         </div>
       </div>
     </div>
