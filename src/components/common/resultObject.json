@@ -1,0 +1,290 @@
+{
+  "ISTJ": {
+    "id": "ISTJ",
+    "nick": "현실주의자",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ESTP"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ENFP"
+      }
+    ]
+  },
+  "ISFJ": {
+    "id": "ISFJ",
+    "nick": "수호자",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ESFP"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ENTP"
+      }
+    ]
+  },
+  "INFJ": {
+    "id": "INFJ",
+    "nick": "옹호자",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ENFP"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ESTP"
+      }
+    ]
+  },
+  "INTJ": {
+    "id": "INTJ",
+    "nick": "전략가",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ENTP"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ESFP"
+      }
+    ]
+  },
+  "ISTP": {
+    "id": "ISTP",
+    "nick": "장인",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ESTJ"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ENFJ"
+      }
+    ]
+  },
+  "ISFP": {
+    "id": "ISFP",
+    "nick": "모험가",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ESFJ"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ENTJ"
+      }
+    ]
+  },
+  "INFP": {
+    "id": "INFP",
+    "nick": "중재자",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ENFJ"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ESFJ"
+      }
+    ]
+  },
+  "INTP": {
+    "id": "INTP",
+    "nick": "논리술사",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ENTJ"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ESFJ"
+      }
+    ]
+  },
+  "ESTP": {
+    "id": "ESTP",
+    "nick": "사업가",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ISTJ"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "INFJ"
+      }
+    ]
+  },
+  "ESFP": {
+    "id": "ESFP",
+    "nick": "연예인",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ISFJ"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "INTJ"
+      }
+    ]
+  },
+  "ENFP": {
+    "id": "ENFP",
+    "nick": "활동가",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "INFJ"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ISTJ"
+      }
+    ]
+  },
+  "ENTP": {
+    "id": "ENTP",
+    "nick": "변론가",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "INTJ"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ISFJ"
+      }
+    ]
+  },
+  "ESTJ": {
+    "id": "ESTJ",
+    "nick": "경영자",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ISTP"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "INFP"
+      }
+    ]
+  },
+  "ESFJ": {
+    "id": "ESFJ",
+    "nick": "집정관",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "ISFP"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "INTP"
+      }
+    ]
+  },
+  "ENFJ": {
+    "id": "ENFJ",
+    "nick": "선도자",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "INFP"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ISTP"
+      }
+    ]
+  },
+  "ENTJ": {
+    "id": "ENTJ",
+    "nick": "통솔자",
+    "img": "img",
+    "description": "블라블라",
+    "like": [
+      {
+        "img": "img",
+        "sub": "INTP"
+      }
+    ],
+    "hate": [
+      {
+        "img": "img",
+        "sub": "ISFP"
+      }
+    ]
+  }
+}
