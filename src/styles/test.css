@@ -103,11 +103,16 @@ body {
   border: 1px solid black;
 }
 
-.middle-box button.button1 {
+.middle-box button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.middle-box > button:nth-child(1) {
   top: 30%;
 }
 
-.middle-box button.button2 {
+.middle-box > button:nth-child(2) {
   top: 60%;
 }
 
