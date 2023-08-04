@@ -9,7 +9,8 @@ import Profile from './Profile';
 import StartPage from "./pages/MbtiStartPage"
 import QuestionPage from "./pages/MbtiQuestionPage";
 import ResultPage from './pages/MbtiResultPage';
-import { BrowserRouter as Router, Route, Routes, Switch } from "react-router-dom";
+import MainPage from './pages/MainPage';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         <Route path="/test" element={<StartPage />} />
         <Route path="/question" element={<QuestionPage />} />
         <Route path="/result/:result" element={<ResultPage />} />
-        <Route path="/main" element={<StartPage />} />
+        <Route path="/main" element={<MainPage />} />
       </Routes>
     </Router>
   )
