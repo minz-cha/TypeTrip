@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import { Link } from "react-router-dom";
 import {
@@ -18,7 +19,9 @@ const authTrueSettings = ["마이페이지", "Logout"];
 const authFalseSettings = ["Login"];
 
 function ButtonAppBar(props) {
-  const [auth, setAuth] = useState(false);
+  const navigate = useNavigate();
+
+  const [auth, setAuth] = useState(true);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenUserMenu = (event) => {
@@ -61,6 +64,7 @@ function ButtonAppBar(props) {
           >
             방만들기
           </Button>
+          {/* 로그인된 상태 */}
           {auth && (
             <div>
               <Box sx={{ flexGrow: 0 }}>
@@ -104,10 +108,18 @@ function ButtonAppBar(props) {
                     },
                   }}
                 >
-                  {authTrueSettings.map((authTrueSettings) => (
+                  {authTrueSettings.map((authTrueSettings, index) => (
                     <MenuItem
                       key={authTrueSettings}
-                      onClick={handleCloseUserMenu}
+                      onClick={() => {
+                        handleCloseUserMenu();
+                        if (index === 0) {
+                          navigate(`/test`);
+                        } else if (index === 1) {
+                          setAuth(false);
+                          navigate(`/main`);
+                        }
+                      }}
                     >
                       <Typography textAlign="center">
                         {authTrueSettings}
@@ -118,6 +130,7 @@ function ButtonAppBar(props) {
               </Box>
             </div>
           )}
+          {/* 로그아웃된 상태 */}
           {!auth && (
             <Box sx={{ flexGrow: 0 }}>
               <IconButton
@@ -161,7 +174,11 @@ function ButtonAppBar(props) {
                 {authFalseSettings.map((authFalseSettings) => (
                   <MenuItem
                     key={authFalseSettings}
-                    onClick={handleCloseUserMenu}
+                    onClick={() => {
+                      handleCloseUserMenu();
+                      setAuth(true);
+                      navigate(`/main`);
+                    }}
                   >
                     <Typography textAlign="center">
                       {authFalseSettings}
