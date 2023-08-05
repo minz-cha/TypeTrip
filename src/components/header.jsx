@@ -13,15 +13,16 @@ import {
   Menu,
   MenuItem,
 } from "@mui/material";
+import SampleImg from "../assets/sample-profile.png";
 import Logo from "../assets/test-logo.svg";
 
 const authTrueSettings = ["마이페이지", "Logout"];
 const authFalseSettings = ["Login"];
 
-function ButtonAppBar(props) {
+function MainHeader(props) {
   const navigate = useNavigate();
 
-  const [auth, setAuth] = useState(true);
+  const [auth, setAuth] = useState(false);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenUserMenu = (event) => {
@@ -81,8 +82,8 @@ function ButtonAppBar(props) {
                       fontSize: 50,
                       color: "#000000",
                     }}
-                    alt="Remy Sharp"
-                    src="/static/images/avatar/2.jpg"
+                    alt="User"
+                    src={SampleImg}
                   />
                 </IconButton>
                 <Menu
@@ -194,4 +195,4 @@ function ButtonAppBar(props) {
   );
 }
 
-export default ButtonAppBar;
+export default MainHeader;

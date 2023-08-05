@@ -1,12 +1,19 @@
 import React from "react";
-import BoardContainer from "../components/boardContainer";
-import Header from "../components/header";
+import MainHeader from "../components/header";
+// import ElevateScroll from "../components/elevateScroll";
 import "../styles/main.css";
+import MainBackground from "../components/mainBackground";
+import Search from "../components/search";
 
 const MainPage = () => {
   return (
-    <Header />
-    // <BoardContainer />
+    <div>
+      {/* <ElevateScroll /> */}
+      <MainBackground />
+      <MainHeader />
+      <Search />
+      {/* <BoardContainer /> */}
+    </div>
   );
 };
 
