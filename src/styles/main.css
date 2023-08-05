@@ -1,19 +1,31 @@
+.logo-container {
+  font-size: 24px; /* 로고 텍스트의 기본 폰트 크기 */
+  width: 258px; /* 로고의 기본 가로 크기 */
+  height: 30px; /* 로고의 기본 세로 크기 */
+  background-color: #f0f0f0; /* 로고 배경색 지정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .board-list-container {
-  width: 1759px;
+  width: 1920px;
   height: 719px;
   display: flex;
   margin-right: 50px;
   margin-left: 50px;
+  margin: 0 auto;
 }
 
 .mini-board-wrapper {
   position: relative;
-  margin-right: 35%;
+  display: flex;
+  margin-right: 30%;
 }
 
-.mini-board-wrapper:last-child {
+/* .mini-board-wrapper:last-child {
   margin-right: 0;
-}
+} */
 
 .mini-board-container {
   position: absolute;
@@ -166,4 +178,192 @@
   text-align: right;
   letter-spacing: 0.03em;
   color: #555050;
+}
+
+@media screen and (max-width: 1920px) {
+  .logo-container {
+    /* 화면이 작아질수록 로고 크기를 조절 */
+    font-size: 16px;
+    width: 206px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .board-list-container {
+    width: 100%;
+    max-width: 768px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mini-board-wrapper {
+    width: 100%; /* 컴포넌트가 한 줄에 하나씩 보이도록 너비 조정 */
+    margin-right: 0;
+    margin-bottom: 20px; /* 컴포넌트들 사이의 간격을 추가 */
+  }
+
+  .mini-board-container {
+    position: relative; /* absolute를 relative로 변경 */
+    width: 90%; /* 컴포넌트 너비를 90%로 조정 */
+    height: auto; /* 높이를 자동으로 조정하여 컴포넌트 내용에 맞게 표시 */
+  }
+
+  .board-image img {
+    top: 0; /* 이미지 상단 여백 제거 */
+    width: 100%; /* 이미지 너비를 100%로 조정하여 컴포넌트에 맞게 표시 */
+    height: auto; /* 높이를 자동으로 조정하여 비율 유지 */
+    border-radius: 0; /* 이미지 둥글기 제거 */
+  }
+
+  .info-container {
+    top: 0; /* info-container를 board-image 아래에 배치 */
+    width: 100%; /* 너비를 100%로 조정하여 컴포넌트에 맞게 표시 */
+    height: auto; /* 높이를 자동으로 조정하여 컴포넌트 내용에 맞게 표시 */
+  }
+
+  .profile-info,
+  .trip-info {
+    width: 100%; /* 컴포넌트 너비를 100%로 조정 */
+    margin: 0; /* 여백 제거 */
+  }
+
+  .profile-image img {
+    top: 5%; /* 이미지 상단 여백 추가 */
+    height: 70px; /* 이미지 높이를 고정 값으로 조정 */
+    border-radius: 50%; /* 이미지를 원형으로 보이도록 설정 */
+  }
+
+  .profile-nickname p {
+    top: 15%; /* 닉네임 상단 여백 추가 */
+    font-size: 18px; /* 폰트 크기 조정 */
+  }
+
+  .profile-age-gender p {
+    top: 40%; /* 나이/성별 상단 여백 추가 */
+    font-size: 16px; /* 폰트 크기 조정 */
+  }
+
+  .tag-container {
+    top: 60%; /* 태그 컨테이너 위치 변경 */
+    height: auto; /* 높이를 자동으로 조정하여 컴포넌트 내용에 맞게 표시 */
+  }
+
+  .tag-text {
+    font-size: 12px; /* 폰트 크기 조정 */
+    padding: 5px 10px; /* 내부 여백 추가 */
+  }
+
+  .line-divide {
+    left: 50%; /* 가운데 정렬 */
+    top: 40%; /* 가운데 정렬 */
+    width: 60px; /* 선 길이 조정 */
+  }
+
+  .trip-info {
+    left: 0; /* 왼쪽으로 배치 */
+    width: 100%; /* 너비를 100%로 조정 */
+  }
+
+  .date-text p {
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+  }
+
+  .duration-text p {
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+  }
+
+  .location-text p {
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .board-list-container {
+    width: 100%;
+    max-width: 480px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mini-board-wrapper {
+    width: 100%; /* 컴포넌트가 한 줄에 하나씩 보이도록 너비 조정 */
+    margin-right: 0;
+    margin-bottom: 20px; /* 컴포넌트들 사이의 간격을 추가 */
+  }
+
+  .mini-board-container {
+    position: relative; /* absolute를 relative로 변경 */
+    width: 90%; /* 컴포넌트 너비를 90%로 조정 */
+    height: auto; /* 높이를 자동으로 조정하여 컴포넌트 내용에 맞게 표시 */
+  }
+
+  .board-image img {
+    top: 0; /* 이미지 상단 여백 제거 */
+    width: 100%; /* 이미지 너비를 100%로 조정하여 컴포넌트에 맞게 표시 */
+    height: auto; /* 높이를 자동으로 조정하여 비율 유지 */
+    border-radius: 0; /* 이미지 둥글기 제거 */
+  }
+
+  .info-container {
+    top: 0; /* info-container를 board-image 아래에 배치 */
+    width: 100%; /* 너비를 100%로 조정하여 컴포넌트에 맞게 표시 */
+    height: auto; /* 높이를 자동으로 조정하여 컴포넌트 내용에 맞게 표시 */
+  }
+
+  .profile-info,
+  .trip-info,
+  .tag-container {
+    width: 100%; /* 컴포넌트 너비를 100%로 조정 */
+    margin: 0; /* 여백 제거 */
+  }
+
+  .profile-image img {
+    top: 5%; /* 이미지 상단 여백 추가 */
+    height: 70px; /* 이미지 높이를 고정 값으로 조정 */
+    border-radius: 50%; /* 이미지를 원형으로 보이도록 설정 */
+  }
+
+  .profile-nickname p {
+    top: 15%; /* 닉네임 상단 여백 추가 */
+    font-size: 18px; /* 폰트 크기 조정 */
+  }
+
+  .profile-age-gender p {
+    top: 40%; /* 나이/성별 상단 여백 추가 */
+    font-size: 16px; /* 폰트 크기 조정 */
+  }
+
+  .tag-container {
+    top: 60%; /* 태그 컨테이너 위치 변경 */
+    height: 100px; /* 높이를 100px로 고정 */
+  }
+
+  .tag-text {
+    font-size: 12px; /* 폰트 크기 조정 */
+    padding: 5px 10px; /* 내부 여백 추가 */
+  }
+
+  .line-divide {
+    left: 50%; /* 가운데 정렬 */
+    top: 40%; /* 가운데 정렬 */
+    width: 40px; /* 선 길이 조정 */
+  }
+
+  .trip-info {
+    left: 0; /* 왼쪽으로 배치 */
+    width: 100%; /* 너비를 100%로 조정 */
+  }
+
+  .date-text p {
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+  }
+
+  .duration-text p {
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+  }
+
+  .location-text p {
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+  }
 }
