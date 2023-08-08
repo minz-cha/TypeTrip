@@ -4,6 +4,11 @@ import MainHeader from "../components/header";
 import "../styles/main.css";
 import MainBackground from "../components/mainBackground";
 import Search from "../components/search";
+import FreeSolo from "../components/searchTest";
+import MiniBoard from "../components/miniBoard";
+import OutlinedCard from "../components/card";
+import SimpleContainer from "../components/backgroundContainer";
+// import MiniBoard from "../components/miniBoard";
 
 const MainPage = () => {
   return (
@@ -12,6 +17,10 @@ const MainPage = () => {
       <MainBackground />
       <MainHeader />
       <Search />
+      <SimpleContainer />
+      {/* <MiniBoard /> */}
+      {/* <OutlinedCard /> */}
+      {/* <MiniBoard /> */}
       {/* <BoardContainer /> */}
     </div>
   );
