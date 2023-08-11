@@ -62,6 +62,9 @@ function SideHeader(props) {
               padding: "10px 20px",
               borderRadius: "10px",
             }}
+            onClick={() => {
+              navigate(`/write`);
+            }}
           >
             방만들기
           </Button>
