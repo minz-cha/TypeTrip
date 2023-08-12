@@ -1,0 +1,93 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.modal > .RegisterModal {
+  width: 480px;
+  height: 621px;
+  background-color: white;
+  position: relative;
+  box-sizing: border-box;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+}
+.modal > .RegisterModal > .close {
+  float: right;
+  font-size: 25px;
+}
+.modal > .RegisterModal .modalContents {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding: 0 20px 32px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal > .RegisterModal .modalContents > .ModalTitle {
+  width: 150px;
+  margin: 0 auto;
+}
+.modal > .RegisterModal .modalContents > .RegisterId {
+  margin-top: 30px;
+  border-radius: 2px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #e5e5e5;
+  padding: 9px 12px;
+  outline: none;
+  box-sizing: border-box;
+}
+.modal > .RegisterModal .modalContents input::placeholder {
+  color: #999999;
+}
+.modal > .RegisterModal .modalContents .RegisterNickname {
+  margin-top: 15px;
+  border-radius: 2px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #e5e5e5;
+  padding: 9px 12px;
+  outline: none;
+  box-sizing: border-box;
+}
+.modal > .RegisterModal .modalContents > .RegisterMBTI {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal > .RegisterModal .modalContents .registerBtn {
+  height: 40px;
+  font-size: 14px;
+  padding: 13px 30px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  line-height: 1px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+  border-style: none;
+}
+
+.modal > .RegisterModal .modalContents .RegisterEnd {
+  text-align: center;
+  font-size: 11px;
+}
+.modal > .RegisterModal .modalContents .RegisterEnd > .RegisterLine {
+  color: #bcbcbc;
+  font-size: 11px;
+  margin-bottom: 35px;
+}
+.modal > .RegisterModal .modalContents .RegisterEnd > .RegisterLine a {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
