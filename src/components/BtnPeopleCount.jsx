@@ -50,7 +50,6 @@ export default function BtnPeopleCount() {
         </Typography>
         <Box
           sx={{
-            // border: "4px solid blue",
             width: "100%",
             display: "flex",
             justifyContent: "space-between",
@@ -69,6 +68,7 @@ export default function BtnPeopleCount() {
               width: "80%",
               fontFamily: "Dovemayo_gothic",
               textAlign: "center",
+              borderRadius: "5px",
             }}
           />
           <Button onClick={handleIncrement} style={buttonStyle}>

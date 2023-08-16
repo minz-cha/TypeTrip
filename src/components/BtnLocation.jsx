@@ -42,7 +42,6 @@ export default function BtnPeopleCount() {
         </Typography>
         <Box
           sx={{
-            // border: "4px solid blue",
             width: "100%",
             display: "flex",
             alignItems: "center",

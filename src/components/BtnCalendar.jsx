@@ -51,7 +51,6 @@ export default function BtnCalendar() {
 
         <Box
           sx={{
-            // border: "4px solid blue",
             width: "100%",
             display: "flex",
             alignItems: "center",
@@ -75,7 +74,7 @@ export default function BtnCalendar() {
             <CalendarMonthIcon /> 여행 끝
           </Button>
           {openCalendar1 && (
-            <Box position="absolute" zIndex="1" top="60px" left="140px">
+            <Box position="absolute" zIndex="1" top="60px" left="135px">
               <DataCalendar
                 open={openCalendar1}
                 handleClose={handleToggleCalendar1}
