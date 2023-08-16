@@ -6,7 +6,8 @@ import { styled } from "@mui/system";
 
 const StyledDateCalendar = styled(MuiDateCalendar)({
   background: "white",
-  width: "100%",
+  heigth: "50%",
+  border: "4px solid blue",
 });
 
 export default function DataCalendar({ open, handleClose }) {

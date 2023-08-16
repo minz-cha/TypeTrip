@@ -46,6 +46,8 @@ export default function BtnCalendar() {
             style={{
               width: "50%",
               height: "55px",
+              backgroundColor: "#fff",
+              color: "#000000",
             }}
           >
             <CalendarMonthIcon /> 날짜 선택
@@ -56,13 +58,15 @@ export default function BtnCalendar() {
             style={{
               width: "50%",
               height: "55px",
+              backgroundColor: "#fff",
+              color: "#000000",
             }}
           >
             <CalendarMonthIcon /> 날짜 선택
           </Button>
         </ButtonGroup>
         {openCalendar1 && (
-          <Box position="absolute" zIndex="1" top="60px" left="150px">
+          <Box position="absolute" zIndex="1" top="60px" left="140px">
             <DataCalendar
               open={openCalendar1}
               handleClose={handleToggleCalendar1}
@@ -70,7 +74,7 @@ export default function BtnCalendar() {
           </Box>
         )}
         {openCalendar2 && (
-          <Box position="absolute" zIndex="1" top="60px" left="500px">
+          <Box position="absolute" zIndex="1" top="60px" left="490px">
             <DataCalendar
               open={openCalendar2}
               handleClose={handleToggleCalendar2}
