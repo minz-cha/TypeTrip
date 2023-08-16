@@ -6,6 +6,15 @@ import DataCalendar from "./DateCalendar";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 
+const buttonStyle = {
+  width: "50%",
+  height: "55px",
+  backgroundColor: "#fff",
+  color: "#000000",
+  fontSize: "18px",
+  fontFamily: "Dovemayo_gothic",
+};
+
 export default function BtnCalendar() {
   const [openCalendar1, setOpenCalendar1] = useState(false);
   const [openCalendar2, setOpenCalendar2] = useState(false);
@@ -20,67 +29,68 @@ export default function BtnCalendar() {
 
   return (
     <React.Fragment>
-      <Box position="relative">
-        <ButtonGroup
-          disableElevation
-          variant="contained"
-          aria-label="Disabled elevation buttons"
+      <Box
+        position="relative"
+        style={{
+          width: "90%",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Typography
           style={{
-            width: "90%",
-            alignItems: "center",
+            width: "15%",
+            fontFamily: "Dovemayo_gothic",
+            marginLeft: "30px",
+            fontSize: "20px",
           }}
         >
+          날짜선택
+        </Typography>
+
+        <Box
+          sx={{
+            // border: "4px solid blue",
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            marginLeft: "10px",
+          }}
+        >
+          <Button onClick={handleToggleCalendar1} style={buttonStyle}>
+            <CalendarMonthIcon /> 여행 시작
+          </Button>
           <Typography
             style={{
-              width: "15%",
-              fontSize: "1.5rem",
               fontFamily: "Dovemayo_gothic",
-              marginLeft: "30px",
               fontSize: "20px",
+              marginLeft: "12px",
+              marginRight: "12px",
             }}
           >
-            날짜선택
+            ~
           </Typography>
-          <Button
-            onClick={handleToggleCalendar1}
-            style={{
-              width: "50%",
-              height: "55px",
-              backgroundColor: "#fff",
-              color: "#000000",
-            }}
-          >
-            <CalendarMonthIcon /> 날짜 선택
+          <Button onClick={handleToggleCalendar2} style={buttonStyle}>
+            <CalendarMonthIcon /> 여행 끝
           </Button>
-          <p>~</p>
-          <Button
-            onClick={handleToggleCalendar2}
-            style={{
-              width: "50%",
-              height: "55px",
-              backgroundColor: "#fff",
-              color: "#000000",
-            }}
-          >
-            <CalendarMonthIcon /> 날짜 선택
-          </Button>
-        </ButtonGroup>
-        {openCalendar1 && (
-          <Box position="absolute" zIndex="1" top="60px" left="140px">
-            <DataCalendar
-              open={openCalendar1}
-              handleClose={handleToggleCalendar1}
-            />
-          </Box>
-        )}
-        {openCalendar2 && (
-          <Box position="absolute" zIndex="1" top="60px" left="490px">
-            <DataCalendar
-              open={openCalendar2}
-              handleClose={handleToggleCalendar2}
-            />
-          </Box>
-        )}
+          {openCalendar1 && (
+            <Box position="absolute" zIndex="1" top="60px" left="140px">
+              <DataCalendar
+                open={openCalendar1}
+                handleClose={handleToggleCalendar1}
+              />
+            </Box>
+          )}
+          {openCalendar2 && (
+            <Box position="absolute" zIndex="1" top="60px" left="490px">
+              <DataCalendar
+                open={openCalendar2}
+                handleClose={handleToggleCalendar2}
+              />
+            </Box>
+          )}
+        </Box>
       </Box>
     </React.Fragment>
   );

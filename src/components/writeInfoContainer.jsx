@@ -3,7 +3,12 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
+import { Button, Typography } from "@mui/material";
+import Preview from "../components/photoPreview";
+import BtnPeopleCount from "./BtnPeopleCount";
+import "../styles/font.css";
+import BtnCalendar from "./BtnCalendar";
+import BtnLocation from "./BtnLocation";
 
 function WriteInfoContainer() {
   return (
@@ -13,7 +18,7 @@ function WriteInfoContainer() {
         <Box
           sx={{
             position: "relative",
-            bgcolor: "#787878",
+            bgcolor: "#c5d5ff",
             height: "50vh",
             display: "flex",
             alignItems: "center",
@@ -23,46 +28,73 @@ function WriteInfoContainer() {
           {/* 내부 Box */}
           <Box
             sx={{
-              bgcolor: "#fff",
+              bgcolor: "#c5d5ff",
               height: "80%",
               width: "80%",
-              border: "4px solid red",
+              // border: "2px solid red",
               position: "relative",
-              display: "flex", // Flexbox 설정
-              alignItems: "center", // 수직 가운데 정렬
-              justifyContent: "center", // 수평 가운데 정렬
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            <Button variant="contained" color="primary">
-              Click Me!
-            </Button>
+            <Box
+              component="form"
+              sx={{
+                "& .MuiTextField-root": { m: 1, width: "80ch" },
+                position: "relative",
+                width: "100%",
+                height: "100%",
+                // border: "4px solid blue",
+                marginLeft: "30px",
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+              }}
+              noValidate
+            >
+              <Box>
+                <BtnLocation />
+                <BtnCalendar />
+                <BtnPeopleCount />
+              </Box>
+            </Box>
           </Box>
         </Box>
-        {/* 방 만들기 하단 - 글 작성부분 */}
+        {/* 방 만들기 하단 */}
         <Box
           sx={{
             position: "relative",
             bgcolor: "#ffffff",
             height: "100vh",
-            border: "4px solid blue",
+            // border: "4px solid blue",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
           }}
         >
-          {/* 제목 */}
+          {/* 방 만들기 */}
           <Box
             sx={{
               bgcolor: "#fff",
               height: "10%",
               width: "80%",
-              border: "4px solid red",
+              // border: "4px solid red",
               position: "relative",
               display: "flex",
+              marginTop: "20px",
             }}
           >
-            <label style={{ fontSize: "1.5rem" }}>방 만들기</label>
+            <label
+              style={{
+                fontSize: "1.5rem",
+                fontFamily: "Dovemayo_gothic",
+                marginLeft: "30px",
+              }}
+            >
+              방 만들기
+            </label>
           </Box>
           {/* 작성Form */}
           <Box
@@ -70,7 +102,7 @@ function WriteInfoContainer() {
               bgcolor: "#fff",
               height: "80%",
               width: "80%",
-              border: "4px solid red",
+              // border: "4px solid red",
               position: "relative",
               display: "flex",
               alignItems: "center",
@@ -86,7 +118,7 @@ function WriteInfoContainer() {
                 bgcolor: "#ffffff",
                 width: "90%",
                 height: "100%",
-                border: "4px solid blue",
+                // border: "4px solid blue",
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
@@ -95,22 +127,40 @@ function WriteInfoContainer() {
               autoComplete="off"
             >
               <Box>
-                <label style={{ fontSize: "1.5rem" }}>제목</label>
+                <label
+                  style={{
+                    fontSize: "1.5rem",
+                    fontFamily: "Dovemayo_gothic",
+                    color: "#787878",
+                    marginLeft: "30px",
+                  }}
+                >
+                  제목
+                </label>
                 <TextField
                   id="title"
                   multiline
                   rows={1}
-                  defaultValue="제목을 입력해주세요"
+                  placeholder="제목을 입력해주세요"
                   variant="outlined"
                 />
               </Box>
               <Box>
-                <label style={{ fontSize: "1.5rem" }}>내용</label>
+                <label
+                  style={{
+                    fontSize: "1.5rem",
+                    fontFamily: "Dovemayo_gothic",
+                    color: "#787878",
+                    marginLeft: "30px",
+                  }}
+                >
+                  내용
+                </label>
                 <TextField
                   id="content"
                   multiline
                   rows={10}
-                  defaultValue="내용을 입력해주세요"
+                  placeholder="내용을 입력해주세요"
                 />
               </Box>
             </Box>
@@ -120,14 +170,35 @@ function WriteInfoContainer() {
                 bgcolor: "#fff",
                 height: "80%",
                 width: "80%",
-                border: "4px solid red",
+                // border: "4px solid red",
                 position: "relative",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
+                marginLeft: "50px",
               }}
-            ></Box>
+            >
+              <Preview />
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              bgcolor: "#fff",
+              height: "10%",
+              width: "80%",
+              // border: "4px solid red",
+              position: "relative",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Button
+              variant="contained"
+              style={{
+                backgroundColor: "#3C4FFF",
+                fontFamily: "Dovemayo_gothic",
+              }}
+            >
+              등록하기
+            </Button>
           </Box>
         </Box>
       </Container>

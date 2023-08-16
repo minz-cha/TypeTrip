@@ -2,17 +2,9 @@ import React, { useState } from "react";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
-import { Typography } from "@mui/material";
-
-const buttonStyle = {
-  width: "8%",
-  height: "55px",
-  backgroundColor: "#3C4FFF",
-  color: "#000000",
-  fontSize: "24px",
-  fontFamily: "Dovemayo_gothic",
-};
+import { Box, Typography } from "@mui/material";
+import { Popper } from "@mui/material";
+import Autocomplete from "@mui/material/Autocomplete";
 
 export default function BtnPeopleCount() {
   const [count, setCount] = useState(1);
@@ -46,36 +38,47 @@ export default function BtnPeopleCount() {
             fontSize: "20px",
           }}
         >
-          모집인원
+          여행지
         </Typography>
         <Box
           sx={{
             // border: "4px solid blue",
             width: "100%",
             display: "flex",
-            justifyContent: "space-between",
             alignItems: "center",
-            marginLeft: "10px",
           }}
         >
-          <Button onClick={handleDecrement} style={buttonStyle}>
-            -
-          </Button>
-          <TextField
-            value={count}
-            style={{
-              backgroundColor: "#fff",
-              fontSize: "18px",
-              width: "80%",
-              fontFamily: "Dovemayo_gothic",
-              textAlign: "center",
-            }}
+          <Autocomplete
+            id="country-select"
+            autoHighlight
+            // disablePortal
+            // getOptionLabel={(option) => option.label}
+            // renderOption={(props, option) => (
+            //   <Box component="li" {...props}>
+            //     {option.label}
+            //   </Box>
+            // )}
+            sx={{ width: "100%" }}
+            options={countries}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                inputProps={{
+                  ...params.inputProps,
+                }}
+                style={{ width: "100%" }}
+              />
+            )}
           />
-          <Button onClick={handleIncrement} style={buttonStyle}>
-            +
-          </Button>
         </Box>
       </Box>
     </React.Fragment>
   );
 }
+
+const countries = [
+  { label: "광주" },
+  { label: "부산" },
+  { label: "여수" },
+  { label: "가평" },
+];
