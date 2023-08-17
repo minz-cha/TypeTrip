@@ -6,7 +6,7 @@ class SignIn extends Component {
   state = {
     accessToken: "",
     nickname: "",
-    travelmbti: "",
+    mbti: "",
     errormessage: "",
   };
 
@@ -16,7 +16,7 @@ class SignIn extends Component {
   };
 
   RegisterClickHandler = () => {
-    const { accessToken, nickname, travelmbti } = this.state;
+    const { accessToken, nickname, mbti } = this.state;
     fetch("http://spring.jmandu.duckdns.org/member/register", {
       method: "POST",
       headers: {
@@ -25,7 +25,7 @@ class SignIn extends Component {
       body: JSON.stringify({
         accessToken,
         nickname,
-        travelmbti,
+        mbti,
       }),
     })
       .then((res) => {
@@ -52,50 +52,52 @@ class SignIn extends Component {
 
   render() {
     const { isOpen, close } = this.props; //카카오 로그인에서 받아오기
-    const { nickname, travelmbti } = this.state;
+    const { nickname, mbti } = this.state;
 
     return (
       <>
         {isOpen ? (
-          <div className="modal">
-            <div onClick={close}>
-              <div className="RegisterModal">
-                <span className="close" onClick={close}>
-                  &times;
-                </span>
-                <div className="modalContents" onClick={isOpen}>
-                  <h2 className="ModalTitle">추가 정보 입력</h2>
-                  <input
-                    name="nickname"
-                    className="RegisterNickname"
-                    type="text"
-                    value={nickname}
-                    placeholder="닉네임"
-                    onChange={this.RegisterHandler}
-                  />
-                  <select value={travelmbti} onChange={this.RegisterHandler}>
-                    <option value="">--여행 성향을 선택해 주세요--</option>
-                    <option value="성향1">성향1</option>
-                    <option value="성향2">성향2</option>
-                    <option value="성향3">성향3</option>
-                    <option value="성향4">성향4</option>
-                    <option value="성향5">성향5</option>
-                    <option value="성향6">성향6</option>
-                    <option value="성향7">성향7</option>
-                    <option value="성향8">성향8</option>
-                  </select>
-                  <button
-                    className="RegisterBtn"
-                    onClick={this.RegisterClickHandler}
-                  >
-                    {" "}
-                    회원가입 완료{" "}
-                  </button>
-                  {errorMessage && <div>{errorMessage}</div>}{" "}
-                  <div className="RegisterEnd">
-                    <div className="RegisterLine">
-                      아직 테스트를 안하셨나요?{" "}
-                      <Link to="/signup">여행성향테스트 하러가기</Link>
+          <div className="modalOverlay" onClick={close}>
+            <div className="modal">
+              <div onClick={close}>
+                <div className="RegisterModal">
+                  <span className="close" onClick={close}>
+                    &times;
+                  </span>
+                  <div className="modalContents" onClick={isOpen}>
+                    <h2 className="ModalTitle">추가 정보 입력</h2>
+                    <input
+                      name="nickname"
+                      className="RegisterNickname"
+                      type="text"
+                      value={nickname}
+                      placeholder="닉네임"
+                      onChange={this.RegisterHandler}
+                    />
+                    <select value={mbti} onChange={this.RegisterHandler}>
+                      <option value="">--여행 성향을 선택해 주세요--</option>
+                      <option value="성향1">성향1</option>
+                      <option value="성향2">성향2</option>
+                      <option value="성향3">성향3</option>
+                      <option value="성향4">성향4</option>
+                      <option value="성향5">성향5</option>
+                      <option value="성향6">성향6</option>
+                      <option value="성향7">성향7</option>
+                      <option value="성향8">성향8</option>
+                    </select>
+                    <button
+                      className="RegisterBtn"
+                      onClick={this.RegisterClickHandler}
+                    >
+                      {" "}
+                      회원가입 완료{" "}
+                    </button>
+                    {errorMessage && <div>{errorMessage}</div>}{" "}
+                    <div className="RegisterEnd">
+                      <div className="RegisterLine">
+                        아직 테스트를 안하셨나요?{" "}
+                        <Link to="/signup">여행성향테스트 하러가기</Link>
+                      </div>
                     </div>
                   </div>
                 </div>
