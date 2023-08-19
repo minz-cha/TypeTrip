@@ -1,16 +1,36 @@
-import React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import TextField from "@mui/material/TextField";
-import { Button, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { CssBaseline, Box, Container, TextField, Button } from "@mui/material";
+import Autocomplete from "@mui/material/Autocomplete";
 import Preview from "../components/photoPreview";
 import BtnPeopleCount from "./BtnPeopleCount";
 import "../styles/font.css";
 import BtnCalendar from "./BtnCalendar";
 import BtnLocation from "./BtnLocation";
+import AttributeTag from "./AttributeTag";
 
 function WriteInfoContainer() {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+
+  const handleButtonClick = () => {
+    const data = { title, content };
+
+    fetch("/api/saveData", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Data saved:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -31,7 +51,6 @@ function WriteInfoContainer() {
               bgcolor: "#c5d5ff",
               height: "80%",
               width: "80%",
-              // border: "2px solid red",
               position: "relative",
               display: "flex",
               alignItems: "center",
@@ -45,7 +64,6 @@ function WriteInfoContainer() {
                 position: "relative",
                 width: "100%",
                 height: "100%",
-                // border: "4px solid blue",
                 marginLeft: "30px",
                 display: "flex",
                 justifyContent: "center",
@@ -97,10 +115,9 @@ function WriteInfoContainer() {
           {/* 작성Form */}
           <Box
             sx={{
-              bgcolor: "#fff",
+              position: "relative",
               height: "80%",
               width: "80%",
-              position: "relative",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -112,7 +129,6 @@ function WriteInfoContainer() {
               sx={{
                 "& .MuiTextField-root": { m: 1, width: "80ch" },
                 position: "relative",
-                bgcolor: "#ffffff",
                 width: "90%",
                 height: "100%",
                 display: "flex",
@@ -157,13 +173,19 @@ function WriteInfoContainer() {
                   multiline
                   rows={10}
                   placeholder="내용을 입력해주세요"
+                  // sx={{
+                  //   justifyContent: "center",
+                  //   flexDirection: "column",
+                  // }}
                 />
+              </Box>
+              <Box sx={{ ml: "8%" }}>
+                <AttributeTag />
               </Box>
             </Box>
             {/* 사진 첨부 */}
             <Box
               sx={{
-                bgcolor: "#fff",
                 height: "80%",
                 width: "80%",
                 position: "relative",
@@ -175,7 +197,6 @@ function WriteInfoContainer() {
           </Box>
           <Box
             sx={{
-              bgcolor: "#fff",
               height: "10%",
               width: "80%",
               position: "relative",
@@ -190,6 +211,7 @@ function WriteInfoContainer() {
                 backgroundColor: "#3C4FFF",
                 fontFamily: "Dovemayo_gothic",
               }}
+              onClick={handleButtonClick}
             >
               등록하기
             </Button>
@@ -199,5 +221,21 @@ function WriteInfoContainer() {
     </React.Fragment>
   );
 }
+
+const top100Films = [
+  { title: "The Shawshank Redemption", year: 1994 },
+  { title: "The Godfather", year: 1972 },
+  { title: "The Godfather: Part II", year: 1974 },
+  { title: "The Dark Knight", year: 2008 },
+  { title: "12 Angry Men", year: 1957 },
+  { title: "Schindler's List", year: 1993 },
+  { title: "Pulp Fiction", year: 1994 },
+  {
+    title: "The Lord of the Rings: The Return of the King",
+    year: 2003,
+  },
+  { title: "The Good, the Bad and the Ugly", year: 1966 },
+  { title: "Fight Club", year: 1999 },
+];
 
 export default WriteInfoContainer;

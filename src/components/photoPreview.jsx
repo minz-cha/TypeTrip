@@ -19,7 +19,7 @@ const Preview = () => {
   };
 
   const handleAddPhotoClick = () => {
-    fileInputRef.current.click(); // Trigger the click event of the file input
+    fileInputRef.current.click();
   };
 
   return (
@@ -29,7 +29,7 @@ const Preview = () => {
         accept="image/*"
         multiple
         type="file"
-        style={{ display: "none" }} // Hide the file input element
+        style={{ display: "none" }}
         onChange={(e) => onUpload(e)}
       />
       <AddAPhotoIcon onClick={handleAddPhotoClick} />
