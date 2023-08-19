@@ -1,6 +1,6 @@
-import React, { Fragment, createRef, useEffect, useState } from "react";
+import React, {Fragment, createRef, useEffect, useState} from "react";
 import questionBox from "../../assets/question-box.png";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import "../../styles/test.css";
 import questions from "../common/questionObject.json";
 
@@ -37,7 +37,7 @@ const QuestionApp = () => {
         const counts = letters.map((letter) => countLetters(arr, letter));
         const maxCount = Math.max(...counts);
         const mostFrequentLetters = letters.filter(
-          (_, i) => counts[i] === maxCount
+          (_, i) => counts[i] === maxCount,
         );
         return mostFrequentLetters;
       };
@@ -49,7 +49,7 @@ const QuestionApp = () => {
       const PJLetters = findMostFrequentLetter(mbti, ["P", "J"]);
 
       const mbtiResult = EILetters.concat(SNLetters, TFLetters, PJLetters).join(
-        ""
+        "",
       );
 
       navigate(`/result/${mbtiResult}`);
@@ -70,24 +70,20 @@ const QuestionApp = () => {
   const buttonLabels = currentQuestion.answer.map((ans) => ans.content);
 
   return (
-    <div className="main-container">
-      <div className="top-box">
+    <div className='main-container'>
+      <div className='top-box'>
         <img src={questionBox} />
         <p>{currentQuestion.question}</p>
       </div>
-      <div className="middle-box">
-        <button onClick={() => handleButtonClick(0)} className="button1">
-          {buttonLabels[0]}
-        </button>
-        <button onClick={() => handleButtonClick(1)} className="button2">
-          {buttonLabels[1]}
-        </button>
+      <div className='middle-box'>
+        <button onClick={() => handleButtonClick(0)}>{buttonLabels[0]}</button>
+        <button onClick={() => handleButtonClick(1)}>{buttonLabels[1]}</button>
       </div>
-      <div className="bottom-box">
-        <div className="progress-bar-container">
+      <div className='bottom-box'>
+        <div className='progress-bar-container'>
           <div
-            className="progress-bar"
-            style={{ width: `${(currentSlide / TOTAL_SLIDES) * 100}%` }}
+            className='progress-bar'
+            style={{width: `${(currentSlide / TOTAL_SLIDES) * 100}%`}}
           ></div>
         </div>
       </div>
