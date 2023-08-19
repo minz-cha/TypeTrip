@@ -10,6 +10,7 @@ import StartPage from "./pages/MbtiStartPage"
 import QuestionPage from "./pages/MbtiQuestionPage";
 import ResultPage from './pages/MbtiResultPage';
 import MainPage from './pages/MainPage';
+import WritePage from './pages/WritePage';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -31,8 +32,14 @@ function App() {
         <Route path="/question" element={<QuestionPage />} />
         <Route path="/result/:result" element={<ResultPage />} />
         <Route path="/main" element={<MainPage />} />
+        <Route path="/write" element={<WritePage />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/oauth/kakao/callback" element={<Auth />} />
+        <Route path="/profile" element={<Profile />} />
+
       </Routes>
     </Router>
+
   )
 }
 

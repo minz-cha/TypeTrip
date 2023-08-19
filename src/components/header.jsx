@@ -14,7 +14,7 @@ import {
   MenuItem,
 } from "@mui/material";
 import SampleImg from "../assets/sample-profile.png";
-import Logo from "../assets/test-logo.svg";
+import Logo from "../assets/main-logo.svg";
 
 const authTrueSettings = ["마이페이지", "Logout"];
 const authFalseSettings = ["Login"];
@@ -51,6 +51,9 @@ function MainHeader(props) {
               src={Logo}
               alt="TypeTrip"
               style={{ height: "28px", color: "#3C4FFF" }}
+              onClick={() => {
+                navigate(`/main`);
+              }}
             />
           </Link>
           <Button
@@ -61,6 +64,9 @@ function MainHeader(props) {
               fontWeight: "bold",
               padding: "10px 20px",
               borderRadius: "10px",
+            }}
+            onClick={() => {
+              navigate(`/write`);
             }}
           >
             방만들기

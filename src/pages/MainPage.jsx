@@ -8,6 +8,7 @@ import FreeSolo from "../components/searchTest";
 import MiniBoard from "../components/miniBoard";
 import OutlinedCard from "../components/card";
 import SimpleContainer from "../components/backgroundContainer";
+import WriteInfoContainer from "../components/writeInfoContainer";
 // import MiniBoard from "../components/miniBoard";
 
 const MainPage = () => {
@@ -17,7 +18,8 @@ const MainPage = () => {
       <MainBackground />
       <MainHeader />
       <Search />
-      <SimpleContainer />
+      {/* <SimpleContainer /> */}
+      {/* <WriteInfoContainer /> */}
       {/* <MiniBoard /> */}
       {/* <OutlinedCard /> */}
       {/* <MiniBoard /> */}
