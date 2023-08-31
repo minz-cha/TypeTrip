@@ -14,11 +14,23 @@ const Auth = () => {
     const code = url.searchParams.get("code")
 
     console.log(code)
-
+    
     axios.get(`${REQUEST_ADDRESS}?code=${code}`).then((res) => {
-      console.log(res)
-    })
-  })
+      if (res.data.status === "ERROR") {
+        if (res.data.message === "존재하지 않는 유저입니다.") {
+          navigate("/RegisterModal", { replace: true });
+        }
+      } else if (res.data.status === "SUCCESS") {
+        navigate("/", { replace: true });
+      } else {
+        console.error("알 수 없는 응답");
+      }
+    }).catch((err) => {
+
+    }).then(((v) => {
+
+    }))
+  }, [])
   
   return <div>Kakao Login</div>
 };
